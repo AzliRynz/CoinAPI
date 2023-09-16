@@ -1,13 +1,13 @@
 <?php
 
-namespace onebone\coinapi\command;
+namespace NurAzliYT\CoinAPI\command;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\utils\TextFormat;
 use pocketmine\player\Player;
 
-use onebone\coinapi\CoinAPI;
+use NurAzliYT\CoinAPI\CoinAPI;
 
 class MyStatusCoinCommand extends Command{
     private $plugin;
