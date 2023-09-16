@@ -1,6 +1,6 @@
 <?php
 
-namespace onebone\coinapi\command;
+namespace NurAzliYT\CoinAPI\command;
 
 use pocketmine\event\TranslationContainer;
 use pocketmine\command\Command;
@@ -9,7 +9,7 @@ use pocketmine\utils\TextFormat;
 use pocketmine\player\Player;
 use pocketmine\Server;
 
-use onebone\coinapi\CoinAPI;
+use NurAzliYT\CoinAPI\CoinAPI;
 
 class MyCoinCommand extends Command{
     private $plugin;
