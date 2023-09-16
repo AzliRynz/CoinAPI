@@ -6,4 +6,6 @@ projects:
   CoinAPI:
     path: ""
     icon: ikon.png
+    lint:
+    phpstan: false
 ...
