@@ -1,12 +1,11 @@
 <?php
 
-namespace onebone\coinapi\command;
+namespace NurAzliYT\CoinAPI\command;
 
 use pocketmine\command\Command;
 use pocketmine\Command\CommandSender;
 use pocketmine\utils\TextFormat;
-
-use onebone\coinapi\CoinAPI;
+use NurAzliYT\CoinAPI\CoinAPI;
 
 class SetLangCommand extends Command{
 	private $plugin;
