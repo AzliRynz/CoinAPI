@@ -1,10 +1,9 @@
 ---
 name: CoinAPI
 main: onebone\coinapi\CoinAPI
-api:
-- 4.0.0
-version: 3.0.1
-author: onebone , BeeAZZ
+api: 5.0.0
+version: 1.0.0
+author: NurAzliYT
 permissions:
   coinapi.*:
     default: op
