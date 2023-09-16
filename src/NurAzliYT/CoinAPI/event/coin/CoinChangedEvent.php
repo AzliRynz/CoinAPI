@@ -1,6 +1,6 @@
 <?php
 
-namespace onebone\CoinAPI\event\coin;
+namespace NurAzliYT\CoinAPI\event\coin;
 
 use NurAzliYT\CoinAPI\CoinAPI;
 use NurAzliYT\CoinAPI\event\CoinAPIEvent;
