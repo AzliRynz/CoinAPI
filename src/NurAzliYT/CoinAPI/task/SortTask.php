@@ -9,7 +9,7 @@ use pocketmine\player\Player;
 use NurAzliYT\CoinAPI\CoinAPI;
 
 class SortTask extends AsyncTask{
-    private $sender, $rebirthcoinData, $addOp, $page, $ops, $banList;
+    private $sender, $rebirthcoinData, $addOp, $page, $ops, $banList, $coinData;
 
     private $max = 0;
 
