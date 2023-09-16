@@ -116,7 +116,7 @@ class CoinAPI extends PluginBase implements Listener{
      *
      * @return bool
      */
-    public function createAccount($player, $defaultCoin = false, bool $force = false) : bool{
+    public function createAccount($player, $defaultcoin = false, bool $force = false) : bool{
         if($player instanceof Player){
             $player = $player->getName();
         }
