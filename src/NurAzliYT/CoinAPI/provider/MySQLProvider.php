@@ -13,7 +13,7 @@ class MySQLProvider implements Provider{
      * @var \mysqli
      */
     public $db;
-    public Player $player
+    public Player $player;
 
     /** @var CoinAPI */
     private $plugin;
