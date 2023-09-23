@@ -3,7 +3,7 @@
 namespace NurAzliYT\CoinAPI\command;
 
 use pocketmine\command\Command;
-use pocketmine\Command\CommandSender;
+use pocketmine\command\CommandSender;
 use pocketmine\utils\TextFormat;
 use NurAzliYT\CoinAPI\CoinAPI;
 
