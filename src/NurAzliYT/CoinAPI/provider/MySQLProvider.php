@@ -12,7 +12,8 @@ class MySQLProvider implements Provider{
     /**
      * @var \mysqli
      */
-    private $db;
+    public $db;
+    public Player $player
 
     /** @var CoinAPI */
     private $plugin;
