@@ -1,6 +1,24 @@
 <?php
 
-namespace NurAzliYT\CoinAPI;
+/*
+ * PointS, the massive point plugin with many features for PocketMine-MP
+ * Copyright (C) 2013-2017  onebone <jyc00410@gmail.com>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+namespace onebone\coinapi;
 
 use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
@@ -9,19 +27,20 @@ use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\utils\Config;
 use pocketmine\utils\Utils;
 use pocketmine\utils\TextFormat;
-use NurAzliYT\CoinAPI\provider\Provider;
-use NurAzliYT\CoinAPI\provider\YamlProvider;
-use NurAzliYT\CoinAPI\provider\MySQLProvider;
-use NurAzliYT\CoinAPI\event\coin\SetCoinEvent;
-use NurAzliYT\CoinAPI\event\coin\ReduceCoinEvent;
-use NurAzliYT\CoinAPI\event\coin\AddCoinEvent;
-use NurAzliYT\CoinAPI\event\coin\CoinChangedEvent;
-use NurAzliYT\CoinAPI\event\account\CreateAccountEvent;
-use NurAzliYT\CoinAPI\task\SaveTask;
+
+use onebone\coinapi\provider\Provider;
+use onebone\coinapi\provider\YamlProvider;
+use onebone\coinapi\provider\MySQLProvider;
+use onebone\coinapi\event\coin\SetCoinEvent;
+use onebone\coinapi\event\coin\ReduceCoinEvent;
+use onebone\coinapi\event\coin\AddCoinEvent;
+use onebone\coinapi\event\coin\CoinChangedEvent;
+use onebone\coinapi\event\account\CreateAccountEvent;
+use onebone\coinapi\task\SaveTask;
 
 class CoinAPI extends PluginBase implements Listener{
-    const API_VERSION = 5;
-    const PACKAGE_VERSION = "1.0.0";
+    const API_VERSION = 4;
+    const PACKAGE_VERSION = "3.0.1";
 
     const RET_NO_ACCOUNT = -3;
     const RET_CANCELLED = -2;
@@ -64,10 +83,10 @@ class CoinAPI extends PluginBase implements Listener{
         if($lang === false){
         }
         $command = strtolower($command);
-        if(isset($this->lang["vie"]["commands"][$command])){
-            return $this->lang["vie"]["commands"][$command];
+        if(isset($this->lang["en"]["commands"][$command])){
+            return $this->lang["en"]["commands"][$command];
         }else{
-            return $this->lang["vie"]["commands"][$command];
+            return $this->lang["en"]["commands"][$command];
         }
     }
 
@@ -82,8 +101,8 @@ class CoinAPI extends PluginBase implements Listener{
         $player = strtolower($player);
         if(isset($this->lang[$this->playerLang[$player]][$key])){
             return $this->replaceParameters($this->lang[$this->playerLang[$player]][$key], $params);
-        }elseif(isset($this->lang["vie"][$key])){
-            return $this->replaceParameters($this->lang["vie"][$key], $params);
+        }elseif(isset($this->lang["en"][$key])){
+            return $this->replaceParameters($this->lang["en"][$key], $params);
         }
         return "Language matching key \"$key\" does not exist.";
     }
@@ -396,15 +415,15 @@ class CoinAPI extends PluginBase implements Listener{
         $map = $this->getServer()->getCommandMap();
 
         $commands = [
-            "mycoin" => "\\NurAzliYT\\CoinAPI\\command\\MyCoinCommand",
-            "topcoin" => "\\NurAzliYT\\CoinAPI\\command\\TopCoinCommand",
-            "setcoin" => "\\NurAzliYT\\CoinAPI\\command\\SetCoinCommand",
-            "seecoin" => "\\NurAzliYT\\CoinAPI\\command\\SeeCoinCommand",
-            "givecoin" => "\\NurAzliYT\\CoinAPI\\command\\GiveCoinCommand",
-            "takecoin" => "\\NurAzliYT\\CoinAPI\\command\\TakeCoinCommand",
-            "paycoin" => "\\NurAzliYT\\CoinAPI\\command\\PayCoinCommand",
-            "setlangcoin" => "\\NurAzliYT\\CoinAPI\\command\\SetLangCommand",
-            "mystatuscoin" => "\\NurAzliYT\\CoinAPI\\command\\MyStatusCoinCommand"
+            "mycoin" => "\\onebone\\coinapi\\command\\MyCoinCommand",
+            "topcoin" => "\\onebone\\coinapi\\command\\TopCoinCommand",
+            "setcoin" => "\\onebone\\coinapi\\command\\SetCoinCommand",
+            "seecoin" => "\\onebone\\coinapi\\command\\SeeCoinCommand",
+            "givecoin" => "\\onebone\\coinapi\\command\\GiveCoinCommand",
+            "takecoin" => "\\onebone\\coinapi\\command\\TakeCoinCommand",
+            "paycoin" => "\\onebone\\coinapi\\command\\PayCoinCommand",
+            "setlangcoin" => "\\onebone\\coinapi\\command\\SetLangCommand",
+            "mystatuscoin" => "\\onebone\\coinapi\\command\\MyStatusCoinCommand"
         ];
         foreach($commands as $cmd => $class){
             $map->register("coinapi", new $class($this));
@@ -417,7 +436,6 @@ class CoinAPI extends PluginBase implements Listener{
                 $this->lang[substr($filename, 5, -5)] = json_decode(file_get_contents($resource->getPathname()), true);
             }
         }
-        $this->lang["user-define"] = (new Config($this->getDataFolder()."messages.yml", Config::YAML, $this->lang["vie"]))->getAll();
+        $this->lang["user-define"] = (new Config($this->getDataFolder()."messages.yml", Config::YAML, $this->lang["en"]))->getAll();
     }
 }
-
