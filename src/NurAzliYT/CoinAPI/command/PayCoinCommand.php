@@ -1,14 +1,14 @@
 <?php
 
-namespace NurAzliYT\CoinAPI\command;
+namespace onebone\coinapi\command;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\utils\TextFormat;
 use pocketmine\player\Player;
 use pocketmine\Server;
-use NurAzliYT\CoinAPI\CoinAPI;
-use NurAzliYT\CoinAPI\event\coin\PayCoinEvent;
+use onebone\coinapi\CoinAPI;
+use onebone\coinapi\event\coin\PayCoinEvent;
 
 class PayCoinCommand extends Command{
     private $plugin;
