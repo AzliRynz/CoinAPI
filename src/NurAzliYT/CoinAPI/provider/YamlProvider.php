@@ -4,7 +4,7 @@ namespace NurAzliYT\CoinAPI\provider;
 
 
 use NurAzliYT\CoinAPI\CoinAPI;
-use pocketmine\player\Player;
+use pocketmine\Player;
 use pocketmine\utils\Config;
 
 class YamlProvider implements Provider{
