@@ -1,4 +1,3 @@
----
 name: CoinAPI
 main: onebone\coinapi\CoinAPI
 api: 5.0.0
@@ -38,4 +37,3 @@ permissions:
   coinapi.command.takecoin:
     description: Allows player to take coin from others
     default: op
-...
