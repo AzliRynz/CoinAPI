@@ -1,5 +1,5 @@
 name: CoinAPI
-main: onebone\coinapi\CoinAPI
+main: NurAzliYT\CoinAPI\CoinAPI
 api: 5.0.0
 version: 0.0.1
 author: onebone , BeeAZZ , NurAzliYT , [Kyz]
