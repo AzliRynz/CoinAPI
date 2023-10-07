@@ -2,4 +2,4 @@ name: libCoinAPI
 author: [NurAzliYT, onebone]
 api: 5.0.0
 version: 1.0.0
-antigen: onebone/coinapi
+antigen: onebone/coinapi/libCoinAPI
