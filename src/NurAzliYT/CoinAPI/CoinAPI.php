@@ -1,6 +1,5 @@
 <?php
-namespace onebone\CoinAPI;
-
+namespace NurAzliYT\CoinAPI;
 use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
