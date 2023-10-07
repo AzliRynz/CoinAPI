@@ -18,11 +18,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace onebone\coinapi\provider;
+namespace NurAzliYT\CoinAPI\provider;
 
 
-use onebone\coinapi\CoinAPI;
-use onebone\coinapi\task\MySQLPingTask;
+use NurAzliYT\CoinAPI\CoinAPI;
+use NurAzliYT\VoinAPI\task\MySQLPingTask;
 
 use pocketmine\player\Player;
 
