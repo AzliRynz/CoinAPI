@@ -18,10 +18,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace onebone\coinapi\provider;
+namespace NurAzliYT\CoinAPI\provider;
 
 
-use onebone\coinapi\CoinAPI;
+use NurAzliYT\CoinAPI\CoinAPI;
 use pocketmine\player\Player;
 use pocketmine\utils\Config;
 
