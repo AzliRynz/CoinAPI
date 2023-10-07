@@ -5,6 +5,7 @@ branches:
 projects:
   CoinAPI:
     path: ""
+  libCoinAPI:
     model: virion
     type: library
 ...
