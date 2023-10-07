@@ -1,5 +1,5 @@
 <?php
-namespace NurAzliYT\Coinapi\event;
+namespace NurAzliYT\CoinAPI\event;
 
 use pocketmine\event\plugin\PluginEvent;
 use pocketmine\event\Cancellable;
