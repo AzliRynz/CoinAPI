@@ -18,9 +18,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace onebone\CoinAPI\provider;
+namespace NurAzliYT\CoinAPI\provider;
 
-use onebone\CoinAPI\CoinAPI;
+use NurAzliYT\CoinAPI\CoinAPI;
 
 interface Provider{
 	public function __construct(CoinAPI $plugin);
