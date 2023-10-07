@@ -1,24 +1,5 @@
 <?php
-
-/*
- * PointS, the massive point plugin with many features for PocketMine-MP
- * Copyright (C) 2013-2017  onebone <jyc00410@gmail.com>
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-
-namespace onebone\coinapi;
+namespace onebone\CoinAPI;
 
 use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
@@ -28,18 +9,18 @@ use pocketmine\utils\Config;
 use pocketmine\utils\Utils;
 use pocketmine\utils\TextFormat;
 
-use onebone\coinapi\provider\Provider;
-use onebone\coinapi\provider\YamlProvider;
-use onebone\coinapi\provider\MySQLProvider;
-use onebone\coinapi\event\coin\SetCoinEvent;
-use onebone\coinapi\event\coin\ReduceCoinEvent;
-use onebone\coinapi\event\coin\AddCoinEvent;
-use onebone\coinapi\event\coin\CoinChangedEvent;
-use onebone\coinapi\event\account\CreateAccountEvent;
-use onebone\coinapi\task\SaveTask;
+use NurAzliYT\CoinAPI\provider\Provider;
+use NurAzliYT\CoinAPI\provider\YamlProvider;
+use NurAzliYT\CoinAPI\provider\MySQLProvider;
+use NurAzliYT\CoinAPI\event\coin\SetCoinEvent;
+use NurAzliYT\CoinAPI\event\coin\ReduceCoinEvent;
+use NurAzliYT\CoinAPI\event\coin\AddCoinEvent;
+use NurAzliYT\CoinAPI\event\coin\CoinChangedEvent;
+use NurAzliYT\CoinAPI\event\account\CreateAccountEvent;
+use NurAzliYT\CoinAPI\task\SaveTask;
 
 class CoinAPI extends PluginBase implements Listener{
-    const API_VERSION = 4;
+    const API_VERSION = 5;
     const PACKAGE_VERSION = "3.0.1";
 
     const RET_NO_ACCOUNT = -3;
