@@ -3,9 +3,8 @@ build-by-default: true
 branches:
 - master
 projects:
-  CoinAPI:
-    path: ""
   libCoinAPI:
+    path: ""
     model: virion
     type: library
 ...
