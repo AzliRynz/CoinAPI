@@ -1,12 +1,8 @@
---- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/NurAzliYT/CoinAPI
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/KnosTx/CoinAPI
 build-by-default: true
 branches:
 - master
 projects:
   CoinAPI:
-    path: "
-  libCoinAPI:
     path: ""
-    type: library
-    model: virion
 ...
